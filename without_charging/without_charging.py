@@ -254,8 +254,6 @@ def result():
 	print(data)
 	write_to_file(data)
 
-
-
 def discharge_all():
 	N1.discharge()
 	N2.discharge()

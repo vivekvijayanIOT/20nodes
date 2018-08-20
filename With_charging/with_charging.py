@@ -232,21 +232,19 @@ for a in range(0,20):
 	yp.append(int(input('Enter the Y-axis value for NODE - %d : '%a)))
 
 
-
-
 # Node declaration
+
 N1,N2,N3,N4,N5=node(charg[1],xp[0],yp[0]),node(charg[2],xp[1],yp[1]),node(charg[3],xp[2],yp[2]),node(charg[4],xp[3],yp[3]),node(charg[5],xp[4],yp[4])
 N6,N7,N8,N9,N10=node(charg[6],xp[5],yp[5]),node(charg[7],xp[6],yp[6]),node(charg[8],xp[7],yp[7]),node(charg[9],xp[8],yp[8]),node(charg[10],xp[9],yp[9])
 N11,N12,N13,N14,N15=node(charg[11],xp[10],yp[10]),node(charg[12],xp[11],yp[11]),node(charg[13],xp[12],yp[12]),node(charg[14],xp[13],yp[13]),node(charg[15],xp[14],yp[14])
 N16,N17,N18,N19,N20=node(charg[16],xp[15],yp[15]),node(charg[17],xp[16],yp[16]),node(charg[18],xp[17],yp[17]),node(charg[19],xp[18],yp[18]),node(charg[20],xp[19],yp[19])
+
 #endnode
+
 N21=node(200,200,200)
-
 n=1
-
 nodexpos=xp
 nodeypos=yp
-
 
 # Searching function starts here
 def result():
@@ -276,8 +274,6 @@ def result():
 		'''%(total_nodes,visited,N1.check,N1.times,N1.show(),N2.check,N2.times,N2.show(),N3.check,N3.times,N3.show(),N4.check,N4.times,N4.show(),N5.check,N5.times,N5.show(),N6.check,N6.times,N6.show(),N7.check,N7.times,N7.show(),N8.check,N8.times,N8.show(),N9.check,N9.times,N9.show(),N10.check,N10.times,N10.show(),N11.check,N11.times,N11.show(),N12.check,N12.times,N12.show(),N13.check,N13.times,N13.show(),N14.check,N14.times,N14.show(),N15.check,N15.times,N15.show(),N16.check,N16.times,N16.show(),N17.check,N17.times,N17.show(),N18.check,N18.times,N18.show(),N19.check,N19.times,N19.show(),N20.check,N20.times,N20.show())
 	print(data)
 	write_to_file(data)
-
-
 
 def discharge_all():
 	N1.discharge()
