@@ -4,35 +4,62 @@
 
 
 
-		Node20 Found at [xpos:0][ypos:0]  
+		Node1 Found at [xpos:2][ypos:3]  
+		Node1 -> Charge:100
+
+		Node2 Found at [xpos:4][ypos:5]  
+		Node2 -> Charge:100
+
+		Node3 Found at [xpos:6][ypos:7]  
+		Node3 -> Charge:100
+
+		Node4 Found at [xpos:6][ypos:5]  
+		Node4 -> Charge:100
+
+		Node5 Found at [xpos:4][ypos:3]  
+		Node5 -> Charge:100
+
+		Node6 Found at [xpos:4][ypos:5]  
+		Node6 -> Charge:100
+
+		Node7 Found at [xpos:6][ypos:7]  
+		Node7 -> Charge:100
+
+		Node8 Found at [xpos:8][ypos:9]  
+		Node8 -> Charge:100
+
+		Node9 Found at [xpos:1][ypos:2]  
+		Node9 -> Charge:100
+
+		Node10 Found at [xpos:3][ypos:4]  
+		Node10 -> Charge:100
+
+		Node11 Found at [xpos:5][ypos:6]  
+		Node11 -> Charge:100
+
+		Node12 Found at [xpos:7][ypos:8]  
+		Node12 -> Charge:100
+
+		Node13 Found at [xpos:9][ypos:8]  
+		Node13 -> Charge:100
+
+		Node14 Found at [xpos:7][ypos:6]  
+		Node14 -> Charge:100
+
+		Node15 Found at [xpos:4][ypos:5]  
+		Node15 -> Charge:100
+
+		Node16 Found at [xpos:3][ypos:2]  
+		Node16 -> Charge:100
+
+		Node17 Found at [xpos:3][ypos:4]  
+		Node17 -> Charge:100
+
+		Node18 Found at [xpos:5][ypos:6]  
+		Node18 -> Charge:100
+
+		Node19 Found at [xpos:7][ypos:4]  
+		Node19 -> Charge:100
+
+		Node20 Found at [xpos:5][ypos:7]  
 		Node20 -> Charge:100
-
-		Node2 Found at [xpos:70][ypos:10]  
-		Node2 -> Charge:96
-
-		Node8 Found at [xpos:90][ypos:20]  
-		Node8 -> Charge:94
-
-		Node15 Found at [xpos:190][ypos:30]  
-		Node15 -> Charge:85
-
-		Node13 Found at [xpos:120][ypos:40]  
-		Node13 -> Charge:78
-
-		Node1 Found at [xpos:20][ypos:60]  
-		Node1 -> Charge:66
-
-		Node17 Found at [xpos:130][ypos:50]  
-		Node17 -> Charge:58
-
-		Node12 Found at [xpos:150][ypos:60]  
-		Node12 -> Charge:56
-
-		Node4 Found at [xpos:100][ypos:90]  
-		Node4 -> Charge:42
-
-		Node3 Found at [xpos:60][ypos:80]  
-		Node3 -> Charge:41
-
-		Node18 Found at [xpos:140][ypos:100]  
-		Node18 -> Charge:24	Charged by Mobile node
