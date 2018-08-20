@@ -1,5 +1,5 @@
 *******Python Code**********
-	Output for Execution done on :Mon Aug 20 18:48:42 2018
+	Output for Execution done on :Mon Aug 20 19:27:21 2018
 
  *** With charging ***			-----*****Result******-----
 
@@ -10,24 +10,24 @@
 
 
 
-		Node 1 :   1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 2 :   1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 3 :   1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 4 :   1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 5 :   1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 6 :   1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 7 :   1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 8 :   1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 9 :   1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 10 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 11 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 12 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 13 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 14 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 15 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 16 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 17 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 18 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 19 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Node 20 :  1 -->Time: 1 sec 	---> Charge remaining : 34%
-		Total time taken : 80 sec
+		Node 1 :   1 -->Time: 38 sec 	---> Charge remaining : 17%
+		Node 2 :   1 -->Time: 2 sec 	---> Charge remaining : 17%
+		Node 3 :   1 -->Time: 1 sec 	---> Charge remaining : 17%
+		Node 4 :   1 -->Time: 1 sec 	---> Charge remaining : 17%
+		Node 5 :   1 -->Time: 79 sec 	---> Charge remaining : 17%
+		Node 6 :   1 -->Time: 46 sec 	---> Charge remaining : 17%
+		Node 7 :   1 -->Time: 34 sec 	---> Charge remaining : 17%
+		Node 8 :   1 -->Time: 34 sec 	---> Charge remaining : 17%
+		Node 9 :   1 -->Time: 32 sec 	---> Charge remaining : 17%
+		Node 10 :  1 -->Time: 38 sec 	---> Charge remaining : 17%
+		Node 11 :  1 -->Time: 46 sec 	---> Charge remaining : 17%
+		Node 12 :  1 -->Time: 48 sec 	---> Charge remaining : 17%
+		Node 13 :  1 -->Time: 34 sec 	---> Charge remaining : 17%
+		Node 14 :  1 -->Time: 48 sec 	---> Charge remaining : 17%
+		Node 15 :  1 -->Time: 33 sec 	---> Charge remaining : 17%
+		Node 16 :  1 -->Time: 4 sec 	---> Charge remaining : 17%
+		Node 17 :  1 -->Time: 35 sec 	---> Charge remaining : 17%
+		Node 18 :  1 -->Time: 46 sec 	---> Charge remaining : 17%
+		Node 19 :  1 -->Time: 71 sec 	---> Charge remaining : 17%
+		Node 20 :  1 -->Time: 94 sec 	---> Charge remaining : 105%
+		Total time taken : 106 sec
