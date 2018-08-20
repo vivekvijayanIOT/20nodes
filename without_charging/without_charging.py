@@ -605,7 +605,8 @@ def forwardx(y,r):
 		searching(D.xpos,D.ypos,D.radius,times)
 		discharge_all()
 		a=("Last postion of ypos: %d  xpos: %d "%(D.ypos,D.xpos))
-		print(a,end="\r")'''
+		print(a,end="\r")
+'''
 final=0
 def forward(y,r):
 	global l
