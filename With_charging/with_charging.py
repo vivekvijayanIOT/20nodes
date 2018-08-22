@@ -755,6 +755,7 @@ print('Node left time:\n*********************************')
 
 lenn=len(nodename)
 
+
 for v1,v2 in zip(lefttime,nodename):
 	print("%s Left at the time : %d sec"%(v2,v1))
 

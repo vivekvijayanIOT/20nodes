@@ -246,6 +246,7 @@ n=0
 nodexpos=xp
 nodeypos=yp
 
+
 # Searching function starts here
 def result():
 	global visited
