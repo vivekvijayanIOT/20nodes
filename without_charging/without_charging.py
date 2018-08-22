@@ -8,19 +8,22 @@ import numpy as nr
 import math
 from decimal import *
 
-lefttime=[]
-nodename=[]
 
-y10=[]
+y10 = []
 starttime=time.time()
 visited=0
 times=0
 mfile=open("mobile_node_data.txt","w")
 mfile.write("\t\tData collected by Mobile node\n\n---------------------------------------------------\n\n")
+
+lefttime=[]
+nodename=[]
+
 def timer():
 	global times
 	times=times+1
 class node:
+	qq=0
 	def __init__(self,c,x,y):
 		self.radius=2
 		self.xpos=x
@@ -33,8 +36,8 @@ class node:
 		self.check=0
 		self.times=0
 	def discharge(self):
-		if(self.charge>10):
-			self.charge-=0.83
+		if(self.charge>0):
+			self.charge-=0.83   # to change the battery level
 	def charger(self,n):
 		global times
 		for x in range(0,100):
@@ -72,9 +75,9 @@ class dyn_node:
 		self.yp1=radius+self.ypos
 		self.ym1=radius-self.ypos
 	def discharge(self):
-		self.charge-=0.1
-		self.radius-=0.1
-total_nodes=20
+		self.charge-=5
+		self.radius-=5
+
 
 total_nodes=20
 charg=[0]
@@ -140,91 +143,109 @@ def effect():
 
 	return effect/20*100
 
-
 def leftcheck():
-	if N1.charge<1:
+	if N1.charge<1 and N1.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 1')
-	if N2.charge<1:
+		N1.qq=1
+	if N2.charge<1 and N2.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 2')
-	if N3.charge<1:
+		N2.qq=1
+	if N3.charge<1 and N3.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 3')
-	if N4.charge<1:
+		N3.qq=1
+	if N4.charge<1 and N4.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 4')
-	if N5.charge<1:
+		N4.qq=1
+	if N5.charge<1 and N5.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 5')
-	if N6.charge<1:
+		N5.qq=1
+	if N6.charge<1 and N6.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 6')
-	if N7.charge<1:
+		N6.qq=1
+	if N7.charge<1 and N7.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 7')
-	if N8.charge<1:
+		N7.qq=1
+	if N8.charge<1 and N8.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 8')
-	if N9.charge<1:
+		N8.qq=1
+	if N9.charge<1 and N9.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 9')
-	if N10.charge<1:
+		N9.qq=1
+	if N10.charge<1 and N10.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 10')
-	if N11.charge<1:
+		N10.qq=1
+	if N11.charge<1 and N11.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 11')
-	if N12.charge<1:
+		N11.qq=1
+	if N12.charge<1 and N12.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 12')
-	if N13.charge<1:
+		N12.qq=1
+	if N13.charge<1 and N13.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 13')
-	if N14.charge<1:
+		N13.qq=1
+	if N14.charge<1 and N14.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 14')
-	if N15.charge<1:
+		N14.qq=1
+	if N15.charge<1 and N15.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 15')
-	if N16.charge<1:
+		N15.qq=1
+	if N16.charge<1 and N16.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 16')
-	if N17.charge<1:
+		N16.qq=1
+	if N17.charge<1 and N17.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 17')
-	if N18.charge<1:
+		N17.qq=1
+	if N18.charge<1 and N18.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 18')
-	if N19.charge<1:
+		N18.qq=1
+	if N19.charge<1 and N19.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 19')
-	if N20.charge<1:
+		N19.qq=1
+	if N20.charge<1 and N20.qq==0:
 		lefttime.append(times)
 		nodename.append('Node 20')
-
-
+		N20.qq=1
 
 xp=[]
 yp=[]
 for a in range(0,20):
-	xp.append(int(input('Enter the X-axis value for NODE - %d : '%a)))
-	yp.append(int(input('Enter the Y-axis value for NODE - %d : '%a)))
-
-
+	xp.append(int(input('Enter the X-axis value for NODE - %d : '%a+1)))
+	yp.append(int(input('Enter the Y-axis value for NODE - %d : '%a+1)))
 
 
 # Node declaration
+
 N1,N2,N3,N4,N5=node(charg[1],xp[0],yp[0]),node(charg[2],xp[1],yp[1]),node(charg[3],xp[2],yp[2]),node(charg[4],xp[3],yp[3]),node(charg[5],xp[4],yp[4])
 N6,N7,N8,N9,N10=node(charg[6],xp[5],yp[5]),node(charg[7],xp[6],yp[6]),node(charg[8],xp[7],yp[7]),node(charg[9],xp[8],yp[8]),node(charg[10],xp[9],yp[9])
 N11,N12,N13,N14,N15=node(charg[11],xp[10],yp[10]),node(charg[12],xp[11],yp[11]),node(charg[13],xp[12],yp[12]),node(charg[14],xp[13],yp[13]),node(charg[15],xp[14],yp[14])
 N16,N17,N18,N19,N20=node(charg[16],xp[15],yp[15]),node(charg[17],xp[16],yp[16]),node(charg[18],xp[17],yp[17]),node(charg[19],xp[18],yp[18]),node(charg[20],xp[19],yp[19])
+
 #endnode
+
 N21=node(200,200,200)
 n=0
-
 nodexpos=xp
 nodeypos=yp
+
 # Searching function starts here
 def result():
 	global visited
@@ -290,6 +311,7 @@ def write_to_file(data):
 		file.write(a)
 	file.write(data)
 
+
 def searching(x,y,r,times):
 	leftcheck()
 	global visited
@@ -307,7 +329,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N1.charger(N1.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N2.check!=1):
 		z=math.sqrt((pow(N2.xpos-x,2))+pow(N2.ypos-y,2))
@@ -322,7 +344,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N2.charger(N2.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N3.check!=1):
 		z=math.sqrt((pow(N3.xpos-x,2))+pow(N3.ypos-y,2))
@@ -337,6 +359,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N3.charger(N3.charge)
 				mfile.write("\tCharged by Mobile node")
+				times=times+4
 
 	if(N4.check!=1):
 		z=math.sqrt((pow(N4.xpos-x,2))+pow(N4.ypos-y,2))
@@ -351,7 +374,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N4.charger(N4.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N5.check!=1):
 		z=math.sqrt((pow(N5.xpos-x,2))+pow(N5.ypos-y,2))
@@ -366,7 +389,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N5.charger(N5.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N6.check!=1):
 		z=math.sqrt((pow(N6.xpos-x,2))+pow(N6.ypos-y,2))
@@ -381,7 +404,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N6.charger(N6.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N7.check!=1):
 		z=math.sqrt((pow(N7.xpos-x,2))+pow(N7.ypos-y,2))
@@ -396,7 +419,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N7.charger(N7.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N8.check!=1):
 		z=math.sqrt((pow(N8.xpos-x,2))+pow(N8.ypos-y,2))
@@ -411,7 +434,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N8.charger(N8.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N9.check!=1):
 		z=math.sqrt((pow(N9.xpos-x,2))+pow(N9.ypos-y,2))
@@ -426,6 +449,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N9.charger(N9.charge)
 				mfile.write("\tCharged by Mobile node")
+				times=times+4
 
 	if(N10.check!=1):
 		z=math.sqrt((pow(N10.xpos-x,2))+pow(N10.ypos-y,2))
@@ -440,7 +464,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N10.charger(N10.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N11.check!=1):
 		z=math.sqrt((pow(N11.xpos-x,2))+pow(N11.ypos-y,2))
@@ -455,7 +479,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N11.charger(N11.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 
 	if(N12.check!=1):
@@ -471,7 +495,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N12.charger(N12.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N13.check!=1):
 		z=math.sqrt((pow(N13.xpos-x,2))+pow(N13.ypos-y,2))
@@ -486,7 +510,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N13.charger(N13.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N14.check!=1):
 		z=math.sqrt((pow(N14.xpos-x,2))+pow(N14.ypos-y,2))
@@ -501,7 +525,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N14.charger(N14.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N15.check!=1):
 		z=math.sqrt((pow(N15.xpos-x,2))+pow(N15.ypos-y,2))
@@ -516,7 +540,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N15.charger(N15.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N16.check!=1):
 		z=math.sqrt((pow(N16.xpos-x,2))+pow(N16.ypos-y,2))
@@ -531,7 +555,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N16.charger(N16.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N17.check!=1):
 		z=math.sqrt((pow(N17.xpos-x,2))+pow(N17.ypos-y,2))
@@ -546,7 +570,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N17.charger(N17.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N18.check!=1):
 		z=math.sqrt((pow(N18.xpos-x,2))+pow(N18.ypos-y,2))
@@ -561,7 +585,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N18.charger(N18.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N19.check!=1):
 		z=math.sqrt((pow(N19.xpos-x,2))+pow(N19.ypos-y,2))
@@ -576,7 +600,7 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N19.charger(N19.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 
 	if(N20.check!=1):
 		z=math.sqrt((pow(N20.xpos-x,2))+pow(N20.ypos-y,2))
@@ -591,23 +615,12 @@ def searching(x,y,r,times):
 				print("\t\tLow Battery...")
 				N20.charger(N20.charge)
 				mfile.write("\tCharged by Mobile node")
-
+				times=times+4
 	if(N21.check!=1):
 		N21.update_time(times)
 
-'''
-def forwardx(y,r):
-	while(D.ypos in range(y,y+40)):
-		timer()
-		D.ypos+=2
-		D.xpos+=10
-		time.sleep(0.5)
-		searching(D.xpos,D.ypos,D.radius,times)
-		discharge_all()
-		a=("Last postion of ypos: %d  xpos: %d "%(D.ypos,D.xpos))
-		print(a,end="\r")
-'''
-final=0
+r=Mobile_node_radius
+
 def forward(y,r):
 	global l
 	global final
@@ -659,7 +672,6 @@ def backward(y,r):
 			final=times
 			break
 	l.clear()
-
 def whennetworkstop():
 	print('''*** Node dying time ***''')
 	if N1.check!=0:
@@ -703,35 +715,20 @@ def whennetworkstop():
 	if N20.check!=0:
 		print( ' Node 20 dies at %s sec'%round((N20.charge*2)+times))
 
-'''
-def backwardx(y):
-	while(D.ypos in range(y,y+40)):
-		timer()
-		D.ypos+=2
-		D.xpos-=10
-		time.sleep(0.5)
-		searching(D.xpos,D.ypos,D.radius,times)
-		discharge_all()
-		a=("Last postion of ypos: %d  xpos: %d "%(D.ypos,D.xpos))
-		print(a,end="\r")'''
-
-r=Mobile_node_radius
-
 # Execution starts
-print("*** MObile node execution starts ***")
+print("**** Mobile node starts ****")
 forward(0,r)
 backward(r,r)
 forward(2*r,r)
 backward(3*r,r)
 forward(4*r,r)
 result()
+
 endtime=time.time()
 exetime=endtime-starttime
 file.write("Total time taken : %d sec"%final)
 file.close()
 mfile.close()
-print('efficiency of network: %d %%'%effect())
-# print('%d Nodes alive in network'%(effect()/100*20))
 
 y10.append(N1.times)
 y10.append(N2.times)
@@ -753,6 +750,7 @@ y10.append(N17.times)
 y10.append(N18.times)
 y10.append(N19.times)
 y10.append(N20.times)
+
 print('Node left time:\n*********************************')
 
 lenn=len(nodename)
@@ -765,7 +763,9 @@ print('\n\nefficiency of network: %d %%'%effecting)
 balance=N1.check+N2.check+N3.check+N4.check+N5.check+N6.check+N7.check+N8.check+N9.check+N10.check+N11.check+N12.check+N13.check+N14.check+N15.check+N16.check+N17.check+N18.check+N19.check+N20.check
 print('\n%d Nodes alive in network'%-(20-lenn-20-balance))
 
+
 whennetworkstop()
+
 x10 = []
 for w in range(1,21):
 	x10.append(w)
