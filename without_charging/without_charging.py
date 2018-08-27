@@ -228,8 +228,8 @@ def leftcheck():
 xp=[]
 yp=[]
 for a in range(0,20):
-	xp.append(int(input('Enter the X-axis value for NODE - %d : '%a+1)))
-	yp.append(int(input('Enter the Y-axis value for NODE - %d : '%a+1)))
+	xp.append(int(input('Enter the X-axis value for NODE - %d : '%a)))
+	yp.append(int(input('Enter the Y-axis value for NODE - %d : '%a)))
 
 
 # Node declaration
