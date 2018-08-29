@@ -629,7 +629,7 @@ def forward(y,r):
 		v=round(a,2)
 		l.append(v)
 	myFormattedList = [ float(Decimal('%.2f'% elem)) for elem in l ]
-	z=round((r/200),2)*10
+	z=round((r/200),2) #deleted *10
 	while(D.ypos in myFormattedList):
 		if(D.ypos<200):
 			timer()
@@ -655,7 +655,7 @@ def backward(y,r):
 		v=round(a,2)
 		l.append(v)
 	myFormattedList = [ float(Decimal('%.2f'% elem)) for elem in l ]
-	z=round((r/200),2)*10
+	z=round((r/200),2) #deleted *10 from code
 	while(D.ypos in myFormattedList):
 		if(D.ypos<200):
 			timer()
